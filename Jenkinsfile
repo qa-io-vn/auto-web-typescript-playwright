@@ -9,7 +9,21 @@ pipeline {
                bat 'npx playwright install'
                bat 'npx playwright install-deps'
                bat 'npm i -D @playwright/test allure-playwright'
-               bat 'npx playwright test'
+               bat 'npx playwright test --reporter=line,allure-playwright'
+         }
+      }
+
+      stage('reports') {
+         steps {
+            script {
+               allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+               ])
+            }
          }
       }
    }
