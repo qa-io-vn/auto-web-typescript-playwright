@@ -20,21 +20,10 @@ pipeline {
    }
 
     stages {
-        stage('Build') {
-            steps {
-               echo 'Building..'
-            }
-        }
         stage('Test') {
             steps {
-               echo 'Testing..'
                   sh 'npm install'
                   sh 'npx playwright test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-               echo 'Deploying....'
             }
         }
     }
