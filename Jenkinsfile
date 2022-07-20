@@ -9,7 +9,9 @@ pipeline {
                bat 'npx playwright install'
                bat 'npx playwright install-deps'
                bat 'npm i -D @playwright/test allure-playwright'
-               bat 'npx playwright test --reporter=line,allure-playwright'
+               catchError {
+                   bat 'npx playwright test --reporter=line,allure-playwright'
+               }       
          }
       }
 
