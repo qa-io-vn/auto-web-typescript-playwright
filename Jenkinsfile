@@ -3,11 +3,11 @@ pipeline {
 
    tools {nodejs "node"}
 
-    stages {
-        stage('Test') {
-            steps {
-                  sh 'npm install'
-            }
-        }
-    }
+   stages {
+      stage('Test') {
+         steps {
+               sh 'npm install'
+         }
+      }
+   }
 }
