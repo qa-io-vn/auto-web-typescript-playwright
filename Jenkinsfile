@@ -6,10 +6,10 @@ pipeline {
    stages {
       stage('Test') {
          steps {
-               sh 'npx playwright install-deps'
-               sh 'npx playwright install'
-               sh 'npm i -D @playwright/test allure-playwright'
-               sh 'npx playwright test'
+               bat 'npx playwright install'
+               bat 'npx playwright install-deps'
+               bat 'npm i -D @playwright/test allure-playwright'
+               bat 'npx playwright test'
          }
       }
    }
