@@ -17,7 +17,7 @@ export class BasePage {
     }
 
     async goToCart() {
-        await this.page.locator(this.cartIcon).click();
+        await this.page.locator(this.cartIcon).click({ force: true });
     }
 }
 

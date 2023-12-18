@@ -3,10 +3,6 @@ import {user} from "../data/user_data";
 import {loginPage} from "../pages/login-page";
 import {basePage} from "../pages/base-page";
 
-test.beforeEach(async ({ page }) => {
-  await page.goto('https://demo.playwright.dev/todomvc');
-});
-
 test.describe('Logout feature', () => {
   test.beforeEach(async ({ page }) => {
     await loginPage(page).openAndLogin(user);

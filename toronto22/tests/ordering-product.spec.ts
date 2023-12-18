@@ -7,11 +7,6 @@ import {cartPage} from "../pages/cart-page";
 import {checkoutInformationPage} from "../pages/checkout-information-page";
 import {checkoutOverviewPage} from "../pages/checkout-overview-page";
 import {checkoutCompletePage} from "../pages/checkout-complete-page";
-
-test.beforeEach(async ({ page }) => {
-  await page.goto('https://demo.playwright.dev/todomvc');
-});
-
 test.describe('Ordering product feature', () => {
   test.beforeEach(async ({ page }) => {
     await loginPage(page).openAndLogin(user);
