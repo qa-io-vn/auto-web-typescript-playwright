@@ -5,6 +5,7 @@ export class CartPage {
 
 	readonly checkoutButton = '//a[text()=\'CHECKOUT\']'
 	readonly selectedItems = '.inventory_item_name'
+	readonly continueShoppingButton = '//a[text()=\'Continue Shopping\']'
 
 	removeItemButton(item: string) {
 		return `//div[text()="${item}"]/../..//button`
@@ -22,6 +23,10 @@ export class CartPage {
 		for (const item of items) {
 				await this.page.locator(this.removeItemButton(item)).click();
 			}
+	}
+
+	async continueShopping() {
+		await this.page.locator(this.continueShoppingButton).click();
 	}
 
 	async getSelectedItems() {

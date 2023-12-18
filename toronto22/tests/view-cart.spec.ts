@@ -49,6 +49,10 @@ test.describe('View cart feature', () => {
 		expect(actual).toStrictEqual(expected);
 	});
 	test('Customer continue to buy more item', async ({page}) => {
+		await productPage(page).addToCart(products);
+		await basePage(page).goToCart();
+		await cartPage(page).continueShopping();
 
+		await expect(await productPage(page).getProductTitle()).toBeVisible();
 	});
 });
