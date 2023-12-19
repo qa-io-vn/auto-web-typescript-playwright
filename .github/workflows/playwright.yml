@@ -25,7 +25,6 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
-    - name: Github page report
     - uses: actions/checkout@v1
     - uses: sidharthv96/playwright-report-action
       with:
