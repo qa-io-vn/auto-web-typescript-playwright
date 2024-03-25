@@ -14,16 +14,13 @@ jobs:
       with:
         node-version: 18
     - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
+      run: npm install
+    - name: Run tests
+      run: npm run ui
     - uses: actions/upload-artifact@master
       with:
         name: allure-results
         path: allure-results
-        retention-days: 20
 
     - name: Get Allure history
       uses: actions/checkout@v2
