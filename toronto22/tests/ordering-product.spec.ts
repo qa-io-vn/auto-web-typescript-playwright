@@ -1,4 +1,4 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import {loginPage} from "../pages/login-page";
 import {user} from "../data/user_data";
 import {productPage} from "../pages/products-page";

@@ -2,8 +2,8 @@
 
 ## Prerequisite
 
-run 'npm i --save-dev @types/node'
+run 'npm install'
 
 ## How to run test
 
-npx playwright test --headed
+npx playwright test
