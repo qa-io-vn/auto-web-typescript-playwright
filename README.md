@@ -90,4 +90,27 @@ Remember, the optimal number of workers depends on your system resources and the
 Be aware of your script, some scenarios can affect each other and may return failing results. For that thing, you should make it run in sequence to make sure everything is running correctly.
 
 ## CI/CD Integration
-//TODO
+
+Playwright shines within CICD pipelines for rapid new feature feedback.  By integrating Playwright's automated tests into CI/CD, every code push triggers tests that ensure the new feature functions properly. This quick feedback loop allows developers to catch and fix issues early, before features reach production, resulting in faster development cycles and higher quality features.
+
+Here's a breakdown of integrating CICD with Playwright for new feature testing:
+
+### Jenkins Pipeline
+
+- Define your pipeline using a Jenkinsfile located in your project's repository.
+- This file can include steps to:
+  - Checkout your code from version control.
+  - Install Playwright and any necessary dependencies.
+  - Run your Playwright test scripts using the playwright test command with appropriate options for browsers and test execution.
+  - Capture and report test results within Jenkins for easy viewing by developers.
+
+### GitHub Actions
+
+- Define your workflow using a playwright.yml file placed in the .github/workflows directory of your repository.
+- This YAML file specifies the workflow steps, similar to the Jenkinsfile:
+  - Checkout code from Git.
+  - Set up the environment (install Playwright etc.).
+  - Run Playwright tests using the playwright test command with desired configurations.
+  - Publish test results within GitHub Actions for developers to access.
+
+Both Jenkins and GitHub Actions offer flexibility in customizing your CI/CD pipeline to fit your project's specific needs.  Choosing the right tool depends on your existing development infrastructure and preferences.
