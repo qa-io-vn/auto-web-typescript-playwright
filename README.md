@@ -14,6 +14,12 @@ Feel free to ask if you get stuck along the way!
 
 To use Playwright tool, we need to install the Nodejs. We can download and install the latest LTS version of nodejs right [here](https://nodejs.org/en/download/current).
 
+To verify the nodejs is installed:
+
+```js
+npm -v
+```
+
 ## Execute the test scenarios
 
 That's exactly right! You've outlined the essential steps for setting up your Playwright project:
