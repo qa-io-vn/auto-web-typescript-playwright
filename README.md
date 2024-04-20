@@ -1,5 +1,7 @@
 # Auto Web Typescript Playwright
 
+![status](https://github.com/qa-io-vn/auto-web-typescript-playwright/actions/workflows/playwright.yml/badge.svg)
+
 You're on the right track with Playwright! It lets you write automation tests in TypeScript for both web apps and APIs. In this project, we'll focus on web apps.
 
 Playwright makes it easy to control the browser: you can navigate to pages, click buttons, fill forms, and check for results. It also lets you take screenshots if needed.
